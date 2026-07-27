@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Apple Light System Theme */
+    --background: 240 5% 97%;       /* #f5f5f7 - Apple System Gray 6 / Canvas */
+    --foreground: 240 10% 12%;      /* #1d1d1f - Apple Dark Text */
+
+    --muted: 240 5% 90%;            /* #e5e5e7 - Apple Muted Gray */
+    --muted-foreground: 240 5% 45%; /* #86868b - Apple System Gray */
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 12%;
+
+    --card: 0 0% 100%;              /* Pure White for Card surfaces */
+    --card-foreground: 240 10% 12%;
+
+    --border: 240 5% 90%;           /* Soft delicate gray borders */
+    --input: 240 5% 94%;            /* Input background */
+
+    /* Apple Blue & Accents */
+    --primary: 212 100% 45%;        /* #0071e3 - Apple System Blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5% 93%;        /* Soft secondary button gray */
+    --secondary-foreground: 240 10% 12%;
+
+    --accent: 212 100% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 354 86% 52%;      /* Apple System Red */
+    --destructive-foreground: 0 0% 100%;
+
+    --ring: 212 100% 45%;
+
+    --radius: 0.75rem;              /* 12px Apple standard rounded corners */
+  }
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(0, 113, 227, 0.03) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(0, 113, 227, 0.02) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* Translucent material look */
+.apple-glass {
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px) saturate(190%);
+  -webkit-backdrop-filter: blur(20px) saturate(190%);
+}
+
+.apple-card-shadow {
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.04);
+}
+
+.apple-border {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
